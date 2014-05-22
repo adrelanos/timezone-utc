@@ -8,6 +8,8 @@ if [ -f /usr/lib/pre.bsh ]; then
    source /usr/lib/pre.bsh
 fi
 
+set -e
+
 LC_ALL=C
 LANG=C
 unset TZ
