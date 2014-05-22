@@ -1,0 +1,54 @@
+#!/bin/bash
+
+## This file is part of Whonix.
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+if [ -f /usr/lib/pre.bsh ]; then
+   source /usr/lib/pre.bsh
+fi
+
+LC_ALL=C
+LANG=C
+unset TZ
+umask 022
+
+. /usr/share/debconf/confmodule
+db_version 2.0
+
+#if [ "$1" = configure ]; then
+   AREA="Etc"
+   ZONE="UTC"
+
+   db_set "tzdata/Areas" "$AREA"
+   db_set "tzdata/Zones/$AREA" "$ZONE"
+   db_stop
+
+   ## Update the time zone.
+   echo "$AREA/$ZONE" > "/etc/timezone"
+   cp -f "/usr/share/zoneinfo/$AREA/$ZONE" "/etc/localtime.dpkg-new" && \
+      mv -f "/etc/localtime.dpkg-new" "/etc/localtime"
+   #which restorecon >/dev/null 2>&1 && restorecon "/etc/localtime"
+
+   echo
+   echo "Current default time zone: '$AREA/$ZONE'"
+
+   ## Show the new setting to the user.
+   TZBase=$(LC_ALL=C TZ=UTC0 date)
+   UTdate=$(LC_ALL=C TZ=UTC0 date -d "$TZBase")
+   TZdate=$(unset TZ ; LANG=C date -d "$TZBase")
+   echo "Local time is now:      $TZdate."
+   echo "Universal Time is now:  $UTdate."
+   if [ -z "$DEBCONF_RECONFIGURE" ] ; then
+      echo "Run 'sudo apt-get purge timezone-utc' followed by 'sudo dpkg-reconfigure tzdata' if you wish to change it (recommended against for Anonymity Linux Distributions)."
+   fi
+   echo
+#fi
+
+## Ensure timezone is UTC.
+#ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+
+#ln -sf /usr/share/zoneinfo/UTC /etc/timezone
+
+## Explicitly "exit 0", so eventually trapped errors can be ignored.
+exit 0
