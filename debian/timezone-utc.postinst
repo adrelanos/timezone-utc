@@ -52,5 +52,7 @@ db_version 2.0
 
 #ln -sf /usr/share/zoneinfo/UTC /etc/timezone
 
+#DEBHELPER#
+
 ## Explicitly "exit 0", so eventually trapped errors can be ignored.
 exit 0
