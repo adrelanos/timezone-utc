@@ -16,3 +16,4 @@ Package: timezone-utc
 Architecture: all
 Depends: ${misc:Depends}
 Description: Sets timezone to UTC
+ Recommended for Anonymity Distributions.
