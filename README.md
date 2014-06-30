@@ -1,6 +1,7 @@
 # Sets timezone to UTC #
 
-Recommended for Anonymity Distributions.
+A metapackage, that sets timezone to UTC, which is recommended for Anonymity
+Distributions.
 
 (This package description has been [automatically](https://github.com/Whonix/whonix-developer-meta-files/blob/master/debug-steps/packaging-helper-script) extracted and mirrored from `debian/control`.)
 
