@@ -1,3 +1,9 @@
+timezone-utc (3:1.5-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 06 Mar 2017 16:17:39 +0000
+
 timezone-utc (3:1.4-1) unstable; urgency=medium
 
   * New upstream version (local package).

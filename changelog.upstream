@@ -1,3 +1,15 @@
+commit 12fd222b5119b1af6d2853a51f5cb2cc5fb6a863
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 6 14:58:35 2017 +0000
+
+    "$@"
+
+commit ae5db455e2656211b7c469e30eec4b93bda4d2de
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Feb 17 14:11:20 2017 +0000
+
+    bumped changelog version
+
 commit 77dae21271701dd96fcec0e0d4e5341f6096bf35
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 10 15:47:52 2017 +0000
