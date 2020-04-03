@@ -1,3 +1,15 @@
+commit 95fe9a928d4d885f49ce0be6ae52fcbf80048815
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Apr 3 12:16:45 2020 -0400
+
+    Depends: tzdata
+
+commit f9bee103e05f4c773e10717455e3a87a00a63491
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 08:03:41 2020 -0400
+
+    bumped changelog version
+
 commit a7100f24c0e4c8ec65bbeedc14021766e3b7fc9b
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 07:22:54 2020 -0400
