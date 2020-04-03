@@ -13,7 +13,7 @@ Standards-Version: 4.3.0
 
 Package: timezone-utc
 Architecture: all
-Depends: ${misc:Depends}
+Depends: tzdata, ${misc:Depends}
 Description: Sets timezone to UTC
  A metapackage, that sets timezone to UTC.
  .
